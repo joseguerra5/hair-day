@@ -1,0 +1,57 @@
+aside {
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 0.75rem;
+
+  & .header-aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & input {
+      width: 10rem;
+    }
+  }
+
+  & .shedule-period {
+
+
+    border: 2px solid var(--gray-200);
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+
+    & header {
+      display: flex;
+      padding-inline: 1.5rem;
+      padding-block: .8rem;
+      border-bottom: 1px solid var(--gray-200);
+      border-width: 100%;
+      justify-content: space-between;
+
+
+      & span {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    & ul {
+      margin-inline: 1.5rem;
+
+      & li {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 1rem;
+
+        & div {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}

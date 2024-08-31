@@ -1,0 +1,116 @@
+.logo {
+  position: absolute;
+  background-color: var(--gray-600);
+  border-bottom-right-radius: 0.8rem;
+  align-items: center;
+  padding: 0.8rem 1.25rem;
+}
+
+.form-section {
+  display: block;
+  background-color: var(--gray-700);
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 0.75rem;
+  gap: 2rem;
+
+  & header {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    & h2 {
+      text-wrap: nowrap;
+      color: var(--gray-100);
+    }
+  }
+
+  & form {
+
+
+    & fieldset {
+      border: none;
+      margin-bottom: 2rem;
+
+      & legend {
+        color: var(--gray-100);
+        margin-bottom: .5rem;
+      }
+
+      & label {
+        margin-bottom: .5rem;
+        color: var(--gray-100);
+      }
+
+      & ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        & li {
+          display: flex;
+          background-color: var(--gray-600);
+          border: 1px solid var(--gray-500);
+          border-radius: .5rem;
+          margin: .5rem;
+          align-items: center;
+          justify-content: center;
+          padding: .5rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--gray-500);
+          }
+
+        }
+
+        & .disabled {
+          background-color: var(--gray-700);
+          color: var(--gray-500);
+        }
+
+        & .selected {
+          color: var(--yellow);
+          border: 1px solid var(--yellow);
+        }
+      }
+    }
+  }
+}
+
+.input-content {
+  position: relative;
+
+  & img {
+    position: absolute;
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+input[type="date"] {
+  position: relative;
+
+  &::-webkit-calendar-picker-indicator {
+    /* esconde o calendário e deixa com todas as funções */
+    opacity: 0;
+  }
+
+  &::before {
+    /* Todo before precisa de um content */
+    content: "";
+    position: absolute;
+    background: url(../../src/assets/Type=CaretDown.svg) center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* estratégia para alinhar qualquer coisa */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

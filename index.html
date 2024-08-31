@@ -8,31 +8,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Hair Day</title>
   <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/index.css">
 </head>
 
-<body>
+<body class="even-columns">
 
-  <header>
+  <header class="logo">
     <img src="src/assets/Logo.svg" alt="HairDay Logo">
   </header>
 
-  <section>
+  <section class="container form-section">
     <Header>
-      <h1>Agende um atendimento</h1>
+      <h2>Agende um atendimento</h2>
       <p>Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
     </Header>
 
     <form>
       <fieldset>
         <legend>Data</legend>
-        <input type="date" name="date" id="date">
+        <div class="input-content">
+          <i><img src="src/assets/Type=CalendarBlank.svg" alt=""></i>
+          <input type="date" name="date" id="date">
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>Horários</legend>
         <label for="morning">Manhã</label>
         <ul id="morning">
-          <li>09:00</li>
+          <li disabled>09:00</li>
           <li>10:00</li>
           <li>11:00</li>
           <li>12:00</li>
@@ -40,9 +44,9 @@
 
         <label for="afternoon">Tarde</label>
         <ul id="afternoon">
-          <li>13:00</li>
+          <li class="disabled">13:00</li>
           <li>14:00</li>
-          <li>15:00</li>
+          <li class="selected">15:00</li>
           <li>16:00</li>
           <li>17:00</li>
           <li>18:00</li>
@@ -58,24 +62,92 @@
 
       <fieldset>
         <legend>Cliente</legend>
-        <input type="text">
+        <div class="input-content">
+          <i><img src="src/assets/Type=UserSquare.svg" alt=""></i>
+          <input type="text" name="customer" id="customer" placeholder="Cliente">
+        </div>
       </fieldset>
 
-      <button></button>
+      <button disabled>Agendar</button>
     </form>
   </section>
 
-  <aside>
-    <header>
+  <aside class="container">
+    <header class="header-aside">
       <div>
         <h2>Sua agenda</h2>
         <p>Consulte os seus cortes de cabelo agendados por dia</p>
       </div>
-      <input type="date" name="" id="">
+      <div class="input-content">
+        <i><img src="src/assets/Type=CalendarBlank.svg" alt=""></i>
+        <input type="date" name="date" id="date">
+      </div>
     </header>
 
+    <div class="shedule-period">
+      <header>
+        <span><img src="src/assets/Type=SunHorizon.svg" alt="">Manhã</span>
+        <p>09h-12h</p>
+      </header>
+      <ul>
+        <li>
+          <div>
+            <span>11:00</span>
+            <span>Ryan Dorwart</span>
+          </div>
+          <img src="src/assets/cancel.svg" alt="">
+        </li>
+
+        <li>
+          <div>
+            <span>11:00</span>
+            <span>Ryan Dorwart</span>
+          </div>
+          <img src="src/assets/cancel.svg" alt="">
+        </li>
+
+        <li>
+          <div>
+            <span>11:00</span>
+            <span>Ryan Dorwart</span>
+          </div>
+          <img src="src/assets/cancel.svg" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="shedule-period">
+      <header>
+        <span><img src="src/assets/Type=CloudSun.svg" alt="">Tarde</span>
+        <p>13h-18h</p>
+      </header>
+      <ul>
+        <li>
+          <div>
+            <span>11:00</span>
+            <span>Ryan Dorwart</span>
+          </div>
+          <img src="src/assets/cancel.svg" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="shedule-period">
+      <header>
+        <span><img src="src/assets/Type=CloudSun.svg" alt="">Noite</span>
+        <p>19h-21h</p>
+      </header>
+      <ul>
+        <li>
+          <div>
+            <span>11:00</span>
+            <span>Ryan Dorwart</span>
+          </div>
+          <img src="src/assets/cancel.svg" alt="">
+        </li>
+      </ul>
+    </div>
+
     <section>
-      
+
     </section>
 
   </aside>
