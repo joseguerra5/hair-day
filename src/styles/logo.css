@@ -38,16 +38,17 @@
         margin-bottom: .5rem;
       }
 
-      & label {
+      & .hour-period {
+        all: unset;
         margin-bottom: .5rem;
         color: var(--gray-100);
       }
 
-      & ul {
+      & .hours {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
-        & li {
+        & .hour {
           display: flex;
           background-color: var(--gray-600);
           border: 1px solid var(--gray-500);
@@ -58,18 +59,29 @@
           padding: .5rem;
           cursor: pointer;
 
+
+
+        }
+
+        & .hour-period {
+          /*faz com que tome toda a linha */
+          grid-column: 1 / -1;
+        }
+
+        & .hour-available {
+
           &:hover {
             background-color: var(--gray-500);
           }
-
         }
 
-        & .disabled {
+        & .hour-unavailable {
           background-color: var(--gray-700);
           color: var(--gray-500);
+          cursor: not-allowed;
         }
 
-        & .selected {
+        & .hour-selected {
           color: var(--yellow);
           border: 1px solid var(--yellow);
         }

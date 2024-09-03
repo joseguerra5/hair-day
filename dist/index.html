@@ -33,30 +33,17 @@
 
       <fieldset>
         <legend>Horários</legend>
-        <label for="morning">Manhã</label>
-        <ul id="morning">
-          <li disabled>09:00</li>
-          <li>10:00</li>
-          <li>11:00</li>
-          <li>12:00</li>
-        </ul>
-
-        <label for="afternoon">Tarde</label>
-        <ul id="afternoon">
-          <li class="disabled">13:00</li>
-          <li>14:00</li>
-          <li class="selected">15:00</li>
-          <li>16:00</li>
-          <li>17:00</li>
-          <li>18:00</li>
-        </ul>
-
-        <label for="night">Noite</label>
-        <ul id="night">
-          <li>19:00</li>
-          <li>20:00</li>
-          <li>21:00</li>
-        </ul>
+       
+        <ul id="hours" class="hours"  aria-label="Horários disponíveis">
+           <!--
+          <li class="hour-period">Manhã</li>
+          <li class="hour hour-unavailable">09:00</li>
+          <li class="hour-period">Tarde</li>
+          <li class="hour hour-selected">13:00</li>
+          <li class="hour-period">Noite</li>
+          <li class="hour hour-available">19:00</li>
+          -->
+        </ul> 
       </fieldset>
 
       <fieldset>
@@ -77,10 +64,6 @@
         <h2>Sua agenda</h2>
         <p>Consulte os seus cortes de cabelo agendados por dia</p>
       </div>
-      <div class="input-content">
-        <i><img src="src/assets/Type=CalendarBlank.svg" alt=""></i>
-        <input type="date" name="date" id="date">
-      </div>
     </header>
 
     <div class="shedule-period">
@@ -88,7 +71,7 @@
         <span><img src="src/assets/Type=SunHorizon.svg" alt="">Manhã</span>
         <p>09h-12h</p>
       </header>
-      <ul>
+      <ul id="period-morning" class="period">
         <li>
           <div>
             <span>11:00</span>
@@ -105,13 +88,6 @@
           <img src="src/assets/cancel.svg" alt="">
         </li>
 
-        <li>
-          <div>
-            <span>11:00</span>
-            <span>Ryan Dorwart</span>
-          </div>
-          <img src="src/assets/cancel.svg" alt="">
-        </li>
       </ul>
     </div>
     <div class="shedule-period">
@@ -119,14 +95,8 @@
         <span><img src="src/assets/Type=CloudSun.svg" alt="">Tarde</span>
         <p>13h-18h</p>
       </header>
-      <ul>
-        <li>
-          <div>
-            <span>11:00</span>
-            <span>Ryan Dorwart</span>
-          </div>
-          <img src="src/assets/cancel.svg" alt="">
-        </li>
+      <ul id="period-afternoon" class="period">
+
       </ul>
     </div>
     <div class="shedule-period">
@@ -134,14 +104,8 @@
         <span><img src="src/assets/Type=CloudSun.svg" alt="">Noite</span>
         <p>19h-21h</p>
       </header>
-      <ul>
-        <li>
-          <div>
-            <span>11:00</span>
-            <span>Ryan Dorwart</span>
-          </div>
-          <img src="src/assets/cancel.svg" alt="">
-        </li>
+      <ul id="period-night" class="period">
+        
       </ul>
     </div>
 
